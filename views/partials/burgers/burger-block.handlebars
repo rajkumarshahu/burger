@@ -1,10 +1,14 @@
+
 {{#if devoured}}
-<li>
+<li class="list-group-item text-muted">
    {{id}}. {{burger_name}}
  </li>
 {{else}}
-   <li>
-   {{id}}. {{burger_name}}
-   <button class="devoure" data-id="{{this.id}}">Devoure!</button>
+   <li class="list-group-item">
+   <i class="fas fa-hamburger"></i>
+{{id}}. {{burger_name}}
+   <div class="">
+      <button class="devour-btn btn btn-secondary btn-sm btn-block" data-id="{{this.id}}">Devour!</button>
+   </div>
    </li>
 {{/if}}

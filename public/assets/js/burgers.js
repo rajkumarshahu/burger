@@ -1,5 +1,5 @@
 $(function() {
-  $(".devoure").on("click", function(event) {
+  $(".devour-btn").on("click", function(event) {
     var id = $(this).data("id");
 
     var newBurgerState = {

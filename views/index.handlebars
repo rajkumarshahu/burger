@@ -1,64 +1,41 @@
-
-<div class="jumbotron text-center">
-    <h1>Eat Da Burger!</h1>
-</div>
-<br>
-<div class="container">
-    <div class="row">
-        <div class="col-md-4">
-        </div>
-        <div class="col-md-4">
-
-        </div>
-        <div class="col-md-4">
-        </div>
+<div class='container'>
+    <div class='jumbotron text-center display-4 text-light'>
+    <i class="fas fa-hamburger"></i>&nbsp;Eat Da Burger!
     </div>
-
-    <div class="row">
-        <div class="col-md-4">
-            <h3>Burgers not Devoured</h3>
-            <br><br><br><br>
-            <div>
-                <ul id="noDevoured" style="list-style:none">
-                    {{#each burgers}}
-                    {{#unless devoured}}
-                    {{>burgers/burger-block devour=false}}
-                    {{/unless}}
-                    {{/each}}
-                </ul>
+    <div class='row'>
+            <div class='col-lg-4 col-sm-4 col-md-12 text-center'>
+                <div class='card'>
+                <div class='card-header'>
+                    <h3><i class='fas fa-pepper-hot'></i>&nbsp;Burgers not Devoured</h3>
+                </div>
+                    <ul class='list-group list-group-flush'>
+                        {{#each burgers}}
+                            {{#unless devoured}}
+                            {{>burgers/burger-block devour = false}}
+                            {{/unless}}
+                        {{/each}}
+                    </ul>
+                </div>
             </div>
-        </div>
-        {{>burgers/apple}}
-        <div class="col-md-4">
-            <h3>Add a burger</h3>
-            <br><br><br><br>
-            <div>
-                <form class="create-form">
-                    <div class="form-group">
-                        <label for="ca">Burger Name:</label>
-                        <input type="text" id="ca" name="name">
-                        <br>
-                        <button type="submit">Add Burger</button>
-                        <br>
-                        <p>Type a burger Name and click Add burger button</p>
-                    </div>
-
-                </form>
+        {{>burgers/add-burger}}
+    </div>
+    <div class='col-lg-4 col-sm-4 col-md-12 text-center'>
+        <div class='card'>
+            <div class='card-header'>
+                <h3><i class='fas fa-drumstick-bite'></i>&nbsp;Burgers Devoured</h3>
             </div>
-        </div>
-
-        <div class="col-md-4">
-            <h3>Burgers Devoured</h3>
-            <br><br><br><br>
-            <div>
-                <ul id="Devour" style="list-style:none">
-                    {{#each burgers}}
+                <ul class='list-group list-group-flush'>
+                {{#each burgers}}
                     {{#if devoured}}
                     {{>burgers/burger-block devour=true}}
                     {{/if}}
                     {{/each}}
                 </ul>
             </div>
-        </div>
     </div>
+
+    </div>
+
+
+
 </div>
