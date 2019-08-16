@@ -4,12 +4,27 @@ body{
   background-position: center;
 }
 
+.container{
+  background: #ffe6e6;
+}
+
 .jumbotron{
   background: rgb(132,15,38);
+  font-family: 'Montserrat', sans-serif;
 }
 
 
 .card-header{
   background: rgb(132,15,38);
+  font-family: 'PT Sans', sans-serif;
   color: white;
+}
+
+.card-body{
+  background: #ffe5f2;
+}
+
+
+footer{
+  background: rgb(132,15,38);
 }

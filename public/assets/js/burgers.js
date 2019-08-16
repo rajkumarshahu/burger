@@ -6,14 +6,10 @@ $(function() {
       devoured: true,
     };
 
-    console.log(newBurgerState);
-    console.log(id);
-
     $.ajax("/api/burgers/" + id, {
       type: "PUT",
       data: newBurgerState,
     }).then(function() {
-      console.log("Changed state to", newBurgerState);
       location.reload();
     });
   });
