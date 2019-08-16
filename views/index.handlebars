@@ -9,7 +9,7 @@
                     <h3><i class='fas fa-pepper-hot'></i>&nbsp;Burgers not Devoured</h3>
                 </div>
                 <div class='card-body'>
-                    <ul class='list-group list-group-flush'>
+                    <ul class='list-group'>
                         {{#each burgers}}
                             {{#unless devoured}}
                             {{>burgers/burger-block devour = false}}
@@ -27,7 +27,7 @@
                 <h3><i class='fas fa-drumstick-bite'></i>&nbsp;Burgers Devoured</h3>
             </div>
             <div class='card-body'>
-                <ul class='list-group list-group-flush'>
+                <ul class='list-group'>
                 {{#each burgers}}
                     {{#if devoured}}
                     {{>burgers/burger-block devour=true}}
@@ -36,8 +36,7 @@
                 </ul>
                 </div>
             </div>
-    </div>
-
+        </div>
     </div>
     <div>&nbsp;</div>
     {{>burgers/footer-burger}}
